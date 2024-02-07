@@ -1,0 +1,318 @@
+{
+  "customId": "query466331",
+  "queryName": "Reserva morador",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Reserva",
+  "entityFullName": "app.entity.Reserva",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Reserva",
+        "namespace": "app.entity.Reserva",
+        "dataSourceOptions": {
+          "id": "app.Reserva",
+          "customId": "Reserva",
+          "customQueryName": "app.Reserva",
+          "paramValues": [],
+          "entityFullName": "app.entity.Reserva",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "ativo",
+              "type": "Boolean",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "data",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "periodo",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "user",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "vaga",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            },
+            {
+              "name": "user_name",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "vaga_name",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Reserva",
+          "fullName": "app.entity.Reserva",
+          "labelName": "app.entity.Reserva (Reserva)"
+        },
+        "alias": "r"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "r",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "r.user.normalizedUserName",
+          "field": "r.user.normalizedUserName",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "valueType": "param",
+          "value": ":userNormalizedUserName",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userNormalizedUserName",
+      "fieldValue": {
+        "blocklyClass": "blockly.AutomatizaUser",
+        "blocklyMethod": "obterUserNameAtual",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entidade\u003capp.entity.Reserva\u003e",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "library": false,
+          "namespace": "blockly.AutomatizaUser",
+          "sourcePath": "src/main/java/blockly/AutomatizaUser.blockly",
+          "language": "java",
+          "class": "blockly.AutomatizaUser",
+          "methods": [
+            {
+              "name": "obterUserNameAtual",
+              "hasReturn": "true",
+              "params": [
+                "Entidade\u003capp.entity.Reserva\u003e"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": {
+      "blocklyClass": "blockly.ReservaServidor",
+      "blocklyMethod": "antesDeInserir",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Entidade\u003capp.entity.Reserva\u003e",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "library": false,
+        "namespace": "blockly.ReservaServidor",
+        "sourcePath": "src/main/java/blockly/ReservaServidor.blockly",
+        "language": "java",
+        "class": "blockly.ReservaServidor",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u003capp.entity.Reserva\u003e"
+            ]
+          }
+        ]
+      }
+    },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": {
+      "type": "server",
+      "blocklyMethod": "depoisDeInserir",
+      "blocklyClass": "blockly.ReservaServidor",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "b0b5617e",
+          "name": "Entidade\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.ReservaServidor",
+        "sourcePath": "src/main/java/blockly/ReservaServidor.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeInserir",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "ativo": null,
+    "data": null,
+    "periodo": null,
+    "user": {
+      "blocklyClass": "blockly.Automatizacoes",
+      "blocklyMethod": "obterLoginIdDoUsarioLogado",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Entidade\u003capp.entity.Reserva\u003e",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "library": false,
+        "namespace": "blockly.Automatizacoes",
+        "sourcePath": "src/main/java/blockly/Automatizacoes.blockly",
+        "language": "java",
+        "class": "blockly.Automatizacoes",
+        "methods": [
+          {
+            "name": "obterLoginIdDoUsarioLogado",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u003capp.entity.Reserva\u003e"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "vaga": null,
+    "user_name": null,
+    "vaga_name": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "ativo": null,
+    "data": null,
+    "periodo": null,
+    "user": null,
+    "vaga": null,
+    "user_name": null,
+    "vaga_name": null
+  },
+  "security": {
+    "id": null,
+    "ativo": null,
+    "data": null,
+    "periodo": null,
+    "user": null,
+    "vaga": null,
+    "user_name": null,
+    "vaga_name": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query466331/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

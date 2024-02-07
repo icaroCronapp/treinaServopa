@@ -1,0 +1,171 @@
+{
+  "customId": "query322636",
+  "queryName": "Periodo Personalizado",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Periodo",
+  "entityFullName": "app.entity.Periodo",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "Periodo",
+        "alias": "p",
+        "namespace": "app.entity.Periodo",
+        "dataSourceOptions": {
+          "id": "app.Periodo",
+          "customId": "Periodo",
+          "customQueryName": "app.Periodo",
+          "paramValues": [],
+          "entityFullName": "app.entity.Periodo",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "periodo",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "ativo",
+              "type": "Boolean",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "dataInicial",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "dataFinal",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Periodo",
+          "fullName": "app.entity.Periodo",
+          "labelName": "app.entity.Periodo (Periodo)"
+        },
+        "name": "Periodo"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "p"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": {
+      "blocklyClass": "blockly.FuncsPeriodoServidor",
+      "blocklyMethod": "antesDeInserir",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Entidade\u003capp.entity.Periodo\u003e",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "library": false,
+        "namespace": "blockly.FuncsPeriodoServidor",
+        "sourcePath": "src/main/java/blockly/funcsPeriodoServidor.blockly",
+        "language": "java",
+        "class": "blockly.FuncsPeriodoServidor",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u003capp.entity.Periodo\u003e"
+            ]
+          }
+        ]
+      }
+    },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "periodo": null,
+    "ativo": null,
+    "dataInicial": null,
+    "dataFinal": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "periodo": null,
+    "ativo": null,
+    "dataInicial": null,
+    "dataFinal": null
+  },
+  "security": {
+    "id": null,
+    "periodo": null,
+    "ativo": null,
+    "dataInicial": null,
+    "dataFinal": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query322636/",
+  "audit": false,
+  "swagger": true,
+  "library": false
+}
