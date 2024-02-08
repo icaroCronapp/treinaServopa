@@ -45,6 +45,14 @@ public class Teste implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @Column(name = "x", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String x;
+
+
+    /**
     * Construtor
     * @generated
     */
@@ -85,6 +93,24 @@ public class Teste implements Serializable {
     */
     public Teste setName(java.lang.String name) {
         this.name = name;
+        return this;
+    }
+    /**
+    * Obtém x
+    * return x
+    * @generated
+    */
+    public java.lang.String getX() {
+        return this.x;
+    }
+
+    /**
+    * Define x
+    * @param x x
+    * @generated
+    */
+    public Teste setX(java.lang.String x) {
+        this.x = x;
         return this;
     }
 
